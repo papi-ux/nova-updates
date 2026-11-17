@@ -113,7 +113,7 @@ jobs:
 
       - name: Build the channel without installing it
         run: |
-          flatpak-builder --user --arch="$NOVA_ARCH" --force-clean --disable-rofiles-fuse --repo=unsigned-repo \
+          flatpak-builder --arch="$NOVA_ARCH" --force-clean --disable-rofiles-fuse --repo=unsigned-repo \
             --subject="Nova ${NOVA_TAG}" --install-deps-from=flathub --assumeyes \
             build-flatpak "source/clients/deck/packaging/flatpak/feed-build-${NOVA_ARCH}.json"
 
